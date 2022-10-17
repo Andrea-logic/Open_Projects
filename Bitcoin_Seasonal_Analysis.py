@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar 25 10:03:02 2022
+
+@author: proto
+"""
+import math
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import time
+import ccxt
+from datetime import datetime, date
+from pandas import DataFrame
+#Fetching Data since one year ago
 today = datetime.now()
 since = today.replace(year=today.year-12)
 difference=today-since
@@ -35,3 +50,5 @@ X=['Overall','No weekends','Weekends']
 plt.figure(0)
 plt.bar(X,Y)
 plt.title('Cumulative Return for '+ str(crypto) +' in percentage since \n' + str(since) + '\n until \n' + str(today))
+
+
