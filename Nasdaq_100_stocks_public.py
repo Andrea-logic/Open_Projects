@@ -141,3 +141,8 @@ df_stocks_gold=df_stocks[(df_stocks.PE>0) & (df_stocks.PE <15) & (df_stocks.PEG 
 print(df_stocks_gold)
 stocks_gold_percentage=100*(len(df_stocks_gold)/len(df_stocks))
 print(stocks_gold_percentage)
+Y=[len(df_stocks_gold),len(df_stocks)]
+X=['Constituents with \n 0<PE<15 and \n and 0<1<PEG','Number of index constituents']
+plt.figure(0)
+plt.bar(X,Y)
+plt.title('Nasdaq 100 Constituents Breakdown')
