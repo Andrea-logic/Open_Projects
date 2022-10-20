@@ -143,6 +143,8 @@ stocks_gold_percentage=100*(len(df_stocks_gold)/len(df_stocks))
 print(stocks_gold_percentage)
 Y=[len(df_stocks_gold),len(df_stocks)]
 X=['Constituents with \n 0<PE<15 and \n and 0<1<PEG','Number of index constituents']
-plt.figure(0)
+plt.figure(4)
 plt.bar(X,Y)
 plt.title('Nasdaq 100 Constituents Breakdown')
+plt.savefig('Nasdaq 100 Constituents Breakdown.jpeg')
+plt.close
